@@ -1,4 +1,4 @@
-# sts-buildpack-conda
+# sts-buildpack-autossh
 
 A custom Heroku [buildpack](https://devcenter.heroku.com/articles/buildpacks) for that securely configures an SSH
 tunnel to another server from each dyno and ensure it stays up by using [autossh](http://www.harding.motd.ca/autossh/).
