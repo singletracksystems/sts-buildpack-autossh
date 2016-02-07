@@ -5,9 +5,9 @@ tunnel to another server from each dyno and ensure it stays up by using [autossh
 
 This project uses `make` for maintenance and testing.
 
-## Updating conda installer
+## Updating autossh installer
 
-To update the cached version of conda, run:
+To update the cached version of `autossh`, run:
 
 `make vendor_update`
 
