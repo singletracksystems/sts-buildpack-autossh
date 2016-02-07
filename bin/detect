@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+#   Determine if this buildpack can be applied to this Heroku app.
+#
+#   usage: bin/detect /tmp/build
+#
+#   Reference: https://devcenter.heroku.com/articles/buildpack-api
+
+#   Location of the app (root dir of git repo e.g. /app).
+BUILD_DIR=$1
+
+echo 'autossh'
