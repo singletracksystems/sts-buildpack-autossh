@@ -8,9 +8,3 @@
 
 #   Location of the app (root dir of git repo e.g. /app).
 BUILD_DIR=$1
-
-cat << EOF
----
-config_vars:
-  PATH: /app/.heroku/bin:/usr/bin:/bin
-EOF
