@@ -1,7 +1,8 @@
 .PHONY: default test
 
+AUTOSSH_TARBALL = autossh-1.4g.tgz
+AUTOSSH_URL = https://www.harding.motd.ca/autossh/$(AUTOSSH_TARBALL)
 VENDOR_DIR = vendor
-AUTOSSH_URL = http://www.harding.motd.ca/autossh/autossh-1.4e.tgz
 
 default:
 	@echo 'usage: make <target>'
@@ -18,8 +19,8 @@ vendor_clean:
 vendor_update:
 	@echo 'downloading latest vendor binaries'
 	mkdir -p $(VENDOR_DIR)
-	cd $(VENDOR_DIR) && wget -N $(AUTOSSH_URL)
-
+	cd $(VENDOR_DIR) && curl -R -o "$(AUTOSSH_TARBALL)" -z "$(AUTOSSH_TARBALL)" $(AUTOSSH_URL)
+	
 vagrant_reset:
 	vagrant destroy --force && vagrant up
 
