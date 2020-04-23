@@ -74,7 +74,7 @@ function download_autossh() {
 }
 
 function build_autossh() {
-    echo "building autossh" | indent
+    echo "building autossh ${AUTOSSH_VERSION}" | indent
     cd ${AUTOSSH_WORKING_DIR}
     ./configure --quiet
     make --quiet
@@ -91,7 +91,7 @@ function install_autossh() {
     echo "installation successful" | indent
 }
 
-section "installing autossh"
+section "installing autossh ${AUTOSSH_VERSION}"
 
 mkdir -p "${AUTOSSH_INSTALL_DIR}"
 mkdir -p "${CACHE_DIR}/autossh"
